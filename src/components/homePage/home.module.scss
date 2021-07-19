@@ -1,0 +1,335 @@
+@import '../../styles/variables.scss';
+$bannerTextPrimarySM: 22px; // Primary Colored Text in Banner for Mobile
+$bannerTextPrimaryMD: 56px;
+
+$bannerTextSecondarySM: 36px; // Secondary Colored Text in Banner for Mobile
+$bannerTextSecondaryMD: 69px;
+
+.banner{
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+}
+.bannerPrimaryText{
+    font-size: $bannerTextPrimarySM;
+    color: $primary;
+    font-weight: 700;
+    line-height: 50px;
+}
+.bannerSecondaryText {
+    font-size: $bannerTextSecondarySM;
+    color: $secondary;
+    font-weight: 700;
+}
+
+.imageBanner {
+    width: 70%;
+}
+
+.imageBanner > div {
+    position: unset !important;
+}
+
+.imageBanner .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+
+.featuredButtonsCarousel {
+    border-radius: 20px 20px 0px 0px;
+    background-color: #fff;
+    height: max-content;
+    // bottom: 0;
+    box-shadow: 0 -0.1px 2px rgba(0, 0, 0, .15);
+}
+
+.featuredButtons {
+    border-color: $primary !important;
+    color: #fff !important;
+    background-color: $primary !important;
+    padding: 6px 30px !important;
+    border-radius: 10px !important;
+    border-style: solid !important;
+    border-width: 1px;
+    font-weight: 500 !important;
+    font-size: 15px;
+
+    &:hover {
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: #fff !important;
+    }
+}
+
+.designerImg {
+    width: 80%;
+}
+
+.designerImg>div {
+    position: unset !important;
+}
+
+.designerImg .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+
+.post-project {
+    font-size: 100px;
+}
+
+.browseJobsInput{
+    width: 100% !important;
+    border-color: #eaeaea !important;
+    border-radius: 10.05px !important;
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: $text-grey !important;
+        // padding-left: 0px !important;
+    }
+}
+
+.browseJobsBtn{
+    position: relative;
+    margin-top: 1rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.getOnTheListInput{
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    height: 62px !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
+        // padding-left: 0px !important;
+    }
+    &::placeholder{
+        color: #fff !important;
+    }
+}
+.getOnTheListBtn{
+    background-color: #fff;
+    color: #000;
+    margin-top: 1rem;
+    position: relative;
+    width: 90px;
+    height: 51px;
+    border-radius: 7px;
+}
+
+.trendingProjects{
+    background-color: #fff;
+}
+.trendingThumbnailImg{
+    width: 4rem; // 47px mobile
+    height: 4rem;
+    background: $primary;
+}
+
+.trendingItemTitle,
+.trendingItemPrice {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #042e48;
+}
+.trendingItemContent{
+    font-size: 11px;
+    color: #6f6f6f;
+    border-color: #6f6f6f !important;
+}
+.btnSeeMore{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eaeaea !important;
+    color: #042e48 !important;
+    border-radius: 20px !important;
+    padding: 3px 10px;
+    font-weight: 500 !important;
+    min-width: 144px;
+    min-height: 40px;
+    background: #fff !important;
+
+    // &:hover {
+    //     color: $secondary !important;
+    //     background: #fff !important;
+    // }
+}
+.tab {
+    overflow: hidden;
+    width: max-content;
+    border: 2px solid #eaeaea;
+    border-radius: 19px !important;
+    display: flex;
+    justify-content: space-between;
+}
+.tab button {
+    position: relative;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 19px !important;
+    padding: 7px 10px;
+    transition: 0.3s;
+    // font-size: 18px;
+    color: #3a3a3a;
+    z-index: 1;
+    width: 150px; // 176px;
+    font-size: small;
+}
+.tab button.active {
+    z-index: 2;
+    color: #ffffff;
+    background-color: #f05631;
+    transition: ease-in 0.6s;
+}
+
+.ourImapct{
+    background-image: url('../../../public/assets/img/homePage/our_impact_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.owlDiv{
+    position: absolute;
+    margin-top: -40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+}
+
+
+@media (min-width: 768px) {
+    .browseJobsInput {
+        height: 56px !important;
+        padding-right: 160px !important;
+    }
+    .browseJobsBtn {
+        position: absolute;
+        top: -8px;
+        margin-right: 10px;
+    }
+    .getOnTheListBtn {
+        position: absolute;
+        top: -11px;
+        right: 17px;
+    }
+    .trendingProjects{
+        border-top: 1px solid #ebebeb;
+        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        border-top-right-radius: 17px;
+        border-top-left-radius: 17px;
+        // border-top: 1px;
+    }
+    .trendingItemTitle{
+        font-size: 20px; // larger
+        line-height: 25px;
+    }
+    .trendingItemContent,
+    .trendingItemPrice {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .trendingThumbnailImg{
+        width: 85px;
+        height: 85px;
+    }
+    .btnSeeMore{
+        border: none;
+    }
+
+    .seeMoreDiv{
+        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        border-bottom-right-radius: 17px;
+        border-bottom-left-radius: 17px;
+        background-color: #fff;
+        
+    }
+    .tab button{
+        width: 176px;
+        font-size: 1rem;
+    }
+    
+}
+
+@media (min-width: 991px) {
+    .featuredButtons {
+        border-color: $primary !important;
+        color: #fff !important;
+        background-color: $primary !important;
+        padding: 10px 30px !important;
+        border-radius: 10px !important;
+        border-style: solid !important;
+        border-width: 1px;
+        font-weight: 500 !important;
+        font-size: 20px;
+
+        &:hover {
+            background-color: $primary !important;
+            border-color: $primary !important;
+            color: #fff !important;
+        }
+    }
+
+    .bannerPrimaryText {
+        font-size: $bannerTextPrimaryMD;
+        color: $primary;
+        font-weight: 700;
+        line-height: 80px;
+    }
+
+    .bannerSecondaryText {
+        font-size: $bannerTextSecondaryMD;
+        color: $secondary;
+        font-weight: 700;
+    }
+    .hireDesiner{
+        font-size: 21px;
+    }
+    .postProject {
+        font-size: 40px;
+    }
+    .subTextDescription{
+        font-size: 25px;
+    }
+    .btnFontLarge{
+        font-size: 18px;
+    }
+    .designerImg {
+        width: 60%;
+    }
+    .findDesingJobsText {
+        font-size: 40.8px;
+    }
+    .trendingThumbnailImg {
+        width: 100px;
+        height: 100px;
+    }
+    .impactText{
+        width: 40%;
+    }
+    .getOnListDiv {
+        font-size: 1.2rem;
+        width: 60%;
+    }
+}
+

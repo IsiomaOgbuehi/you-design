@@ -1,0 +1,30 @@
+.loginBg {
+  background-image: url("../../../public/assets/img/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(red)), -webkit-gradient(linear, left top, right top, from(green), color-stop(yellow), to(blue));
+  background: linear-gradient(to top, transparent, red), linear-gradient(to right, green, yellow, blue);
+  background-size: 100% 100%, 2000% 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.6;
+}
+
+.btnSuccess {
+  background: #4FD08E !important;
+  border-color: #4FD08E !important;
+  width: 100%;
+  margin: auto;
+  color: #fff;
+}
+
+.btnSuccess:hover {
+  background: #34CE79 !important;
+  border-color: #34CE79 !important;
+  color: #fff;
+}
+/*# sourceMappingURL=login.module.css.map */

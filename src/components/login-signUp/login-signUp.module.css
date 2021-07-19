@@ -1,0 +1,36 @@
+.socialBtnFb {
+  background-color: #3B5998;
+  width: 190px;
+  border-radius: 3px;
+  padding: 2px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.socialBtnFb .iconDiv {
+  background-color: white;
+  width: 40px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.socialBtnFb:hover {
+  background-color: #4469AA;
+}
+
+.socialBtnGoogle {
+  background-color: #EBECED;
+  width: 50px;
+  border-radius: 3px;
+  padding: 2px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.socialBtnGoogle .iconDiv {
+  width: 100%;
+}
+
+.socialBtnGoogle:hover {
+  background-color: #F0F1F2;
+}
+/*# sourceMappingURL=login-signUp.module.css.map */

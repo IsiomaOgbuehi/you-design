@@ -1,0 +1,27 @@
+@import '../variables.scss';
+
+.signupBg {
+    @include illustrationBackground('../../../public/assets/img/register-bg.jpg');
+    // box-shadow: inset 0 0 99999px rgba(224, 149, 149, 0.8);
+}
+
+.overlay {
+    background: rgba(224, 149, 149, 0.8);
+    // background: linear-gradient(to bottom, red, blue);
+    // background: linear-gradient(to top, #E09595, #E09595);
+    // background-size: 100% 100%,
+    //     2000% 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    filter: brightness(0.2);
+    // z-index: 2;
+    // opacity: 0.2;
+    // animation: overlayAnimation 10s ease infinite;
+    // transition: background 2s ease-out;
+}
+// BUTTON
+.btnSuccess {
+    @include btn($success-green, #34CE79, 100%);
+
+}

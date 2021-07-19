@@ -1,0 +1,45 @@
+// LOGO SIZE
+$logo-width: 80px;
+
+// FONT SIZE
+$font-size-lg: 35px;
+$font-size-small: 12px;
+
+
+// COLORS
+$link-danger: #FF0000;
+$text-grey: #3A3A3A;
+$text-grey2: #858F96;
+$text-grey3: #5b6987;
+$text-grey4: #231e1b;
+$orange: #f05631;
+$primaryText2: #042e48;
+
+// TEMPLATE COLORS
+$secondary:#DD0B0B;
+$success-green: #4FD08E;
+$primary: #0B3148;
+
+// MIXINS
+// button mixins
+@mixin btn($color, $hover, $width) {
+    background: $color !important;
+    border-color: $color !important;
+    width: $width;
+    margin: auto;
+    color: #fff;
+
+    &:hover {
+        // background: #34CE79 !important;
+        background: $hover !important;
+        border-color: $hover !important;
+        color: #fff;
+    }
+}
+
+// LOGIN ILLUSTRATION
+@mixin illustrationBackground($image) {
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

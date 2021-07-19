@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import './variables.scss';
+body{
+    font-family: 'Barlow', sans-serif !important;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden !important;
+}
+
+// L0G0
+.logoDiv {
+    margin-top: 2rem;
+
+    .logoImg {
+        min-width: 70% !important;
+        right: auto !important;
+        cursor: pointer;
+    }
+
+}
+
+
+// FONT SIZES
+.font-large{
+    font-size: $font-size-lg;
+}
+.font-small{
+    font-size: $font-size-small;
+}
+
+// DEFAULT FONT COLOR
+.default-primary-font-color2 {
+    color: $primaryText2;
+}
+.default-font-color{
+    color: $text-grey;
+}
+.default-font-color2{
+    color: $text-grey2;
+}
+.default-font-color3{
+    color: $text-grey3;
+}
+.defaul-font-color4{
+    color: $text-grey4;
+}
+.dark-font-color{
+    color: #000;
+}
+.text-danger{
+    color: $secondary !important;
+}
+
+// LINK COLOR
+.link-danger{
+    color: $link-danger;
+    a{
+        text-decoration: none;
+        color: $link-danger;
+        &:hover{
+            text-decoration: underline;
+            color: $link-danger;
+        }
+    }
+}
+
+// BG COLOR
+
+.bg-red{
+    background-color: $secondary;
+}
+.bg-orange{
+    background-color: $orange;
+}
+
+input {
+    filter: none;
+}
+
+// LOGIN & SIGNUP FORM
+.__form {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0px !important;
+    padding-left: 0px !important;
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border-bottom-color: $text-grey !important;
+        padding-left: 0px !important;
+    }
+}
+
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.btn-outline-primary {
+    // border-style: solid;
+    // border-width: 0.8px;
+    border-color: $primary !important;
+    color: $primary !important;
+    border-radius: 7px !important;
+    padding: 5px 30px !important;
+
+    &:hover {
+        color: #fff !important;
+        background: $primary !important;
+    }
+}
+
+.btn-outline-white {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff !important;
+    color: #fff !important;
+    border-radius: 7px !important;
+    padding: 3px 10px;
+    font-weight: 500 !important;
+    min-width: 144px;
+    min-height: 40px;
+
+    &:hover {
+        color: $secondary !important;
+        background: #fff !important;
+    }
+}
+
+.btn-white {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff !important;
+    color: $secondary !important;
+    border-radius: 7px !important;
+    padding: 3px 10px;
+    font-weight: 500 !important;
+    min-width: 144px;
+    min-height: 40px;
+    background: #fff !important;
+
+    &:hover {
+        color: #fff !important;
+        background: $secondary !important;
+    }
+}
+
+.btn-red {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $secondary !important;
+    color: #fff !important;
+    border-radius: 7px !important;
+    padding: 3px 10px;
+    font-weight: 500 !important;
+    min-width: 144px;
+    min-height: 40px;
+    background: $secondary !important;
+
+    &:hover {
+        color: #fff !important;
+        background: $secondary !important;
+    }
+}
+
+.btn-primary {
+    border-color: $primary !important;
+    color: #fff !important;
+    background-color: $primary !important;
+    padding: 6px 15px !important;
+    border-radius: 7px !important;
+    border-style: solid !important;
+    border-width: 1px;
+    font-weight: 500 !important;
+    &:hover {
+        background-color: #03263b !important;
+        border-color: #03263b !important;
+    }
+}
+
+.btn-secondary-outline {
+    border-color: $secondary !important;
+    color: $secondary !important;
+    background-color: #fff !important;
+    padding: 6px 15px !important;
+    border-radius: 7px !important;
+    border-style: solid !important;
+    border-width: 1px;
+    font-weight: 500 !important;
+    &:hover {
+        background-color: $secondary !important;
+        border-color: $secondary !important;
+        color: #fff !important;
+    }
+}
+
+// LOGIN PAGE OVERLAY TEXT
+.overlay-text {
+    position: absolute;
+    width: 60%;
+    height: 35%;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    font-size: 45px;
+    color: #fff;
+    margin-left: 10%;
+    font-weight: 800;
+
+    .author {
+        font-size: calc(45px/2);
+        margin-top: 2px;
+    }
+}
+.hiddenBody{
+    overflow: hidden;
+}
+
+nav.sticky {
+    position: sticky;
+    background-color: #fff;
+    padding: 0.5rem;
+    z-index: 100;
+    animation: slideIn .42s cubic-bezier(.165, .84, .44, 1);
+}
+@keyframes slideIn {
+    0%{transform: translate3d(0, -80px, 0);}
+    100% {
+        transform: translateZ(0);
+    }
+}
+
+@media (min-width: 991px) {
+    
+}

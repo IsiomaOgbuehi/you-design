@@ -1,0 +1,80 @@
+// @import '../../styles/variables.scss';
+
+// LOGIN
+// .logoDiv {
+//     margin-top: 2rem;
+
+//     .logoImg {
+//         width: $logo-width;
+//         cursor: pointer;
+//     }
+
+// }
+
+// SOCIAL
+.socialBtnFb {
+    background-color: #3B5998;
+    width: 190px; // 80%-sm 60% for Large Screen
+    border-radius: 3px;
+    padding: 2px;
+    height: 40px;
+    cursor: pointer;
+
+    .iconDiv {
+        background-color: white;
+        width: 40px;
+        border-radius: 3px 0px 0px 3px;
+    }
+
+    &:hover {
+        background-color: #4469AA;
+    }
+}
+
+.socialBtnGoogle {
+    // background-color: #4285F4;
+    background-color: #EBECED;
+    width: 50px; // 80%-sm 50% for Large Screen
+    border-radius: 3px;
+    padding: 2px;
+    height: 40px;
+    cursor: pointer;
+
+    .iconDiv {
+        // background-color: white; Main
+        // width: 40px; Main
+        width: 100%;
+        // border-radius: 3px 0px 0px 3px; Main
+    }
+
+    &:hover {
+        // background-color: #3777D3; Main
+        background-color: #F0F1F2;
+    }
+}
+
+// BOOTSTRAP STYLE UPDATE
+// CHECKBOX - form-check
+// .form-check .form-check-input {
+//     float: left;
+//     margin-left: -0.5em !important;
+// }
+
+// .overlay-text {
+//     position: absolute;
+//     width: 60%;
+//     height: 35%;
+//     margin-top: auto;
+//     margin-bottom: auto;
+//     top: 0;
+//     bottom: 0;
+//     font-size: 45px;
+//     color: #fff;
+//     margin-left: 10%;
+//     font-weight: 800;
+
+//     .author {
+//         font-size: calc(45px/2);
+//         margin-top: 2px;
+//     }
+// }

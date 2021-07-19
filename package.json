@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "hamburger-react": "^2.4.1",
     "next": "11.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-owl-carousel": "^2.3.3"
   },
   "devDependencies": {
     "@types/react": "17.0.11",

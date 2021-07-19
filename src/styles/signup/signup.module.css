@@ -1,0 +1,29 @@
+.signupBg {
+  background-image: url("../../../public/assets/img/register-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  background: rgba(224, 149, 149, 0.8);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-filter: brightness(0.2);
+          filter: brightness(0.2);
+}
+
+.btnSuccess {
+  background: #4FD08E !important;
+  border-color: #4FD08E !important;
+  width: 100%;
+  margin: auto;
+  color: #fff;
+}
+
+.btnSuccess:hover {
+  background: #34CE79 !important;
+  border-color: #34CE79 !important;
+  color: #fff;
+}
+/*# sourceMappingURL=signup.module.css.map */
