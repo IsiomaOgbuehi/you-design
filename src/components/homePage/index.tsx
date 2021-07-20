@@ -264,7 +264,7 @@ export default function HomePage () {
               </h3>
             </div>
           </div>
-          <div className={`row mx-md-5 ${style.trendingProjects}`}>
+          <div className={`row mx-lg-5 ${style.trendingProjects}`}>
             <div className={`container border-bottom`}>
               {/*  */}
               <div className="row px-2 px-md-3 px-lg-4 py-3 justify-content-between">
@@ -327,16 +327,20 @@ export default function HomePage () {
           </div>
 
           <div
-            className={`mx-md-5 py-3 mt-md-0 text-center ${style.seeMoreDiv}`}
+            className={`row mx-lg-5 py-3 mt-md-0 text-center ${style.seeMoreDiv}`}
           >
-            <button className={`${style.btnSeeMore}`}>
-              <div className="d-flex align-items-center justify-content-center">
-                <span className="me-2">See More</span>{" "}
-                <span>
-                  <ImArrowRight2 />
-                </span>{" "}
-              </div>
-            </button>
+            <div className="container">
+              {/* <div className="row"> */}
+                <button className={`${style.btnSeeMore}`}>
+                  <div className="d-flex align-items-center justify-content-center">
+                    <span className="me-2">See More</span>{" "}
+                    <span>
+                      <ImArrowRight2 />
+                    </span>{" "}
+                  </div>
+                </button>
+              {/* </div> */}
+            </div>
           </div>
         </div>
 
