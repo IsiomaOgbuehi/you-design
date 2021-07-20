@@ -366,7 +366,7 @@ export default function HomePage () {
               <div className={`col-md-6 mb-4 mb-lg-5`}>
                 <div className="row">
                   <div
-                    className={`col-md-4 col-lg-3 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
+                    className={`col-md-4 col-lg-2 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
                   >
                     <div style={{ width: "6rem" }}>
                       <Image
@@ -377,7 +377,7 @@ export default function HomePage () {
                     </div>
                   </div>
                   <div
-                    className={`col-md-8 col-lg-9 text-center text-md-start`}
+                    className={`col-md-8 col-lg-10 text-center text-md-start`}
                   >
                     <h5 className="default-primary-font-color2 mb-3">
                       Register
@@ -393,7 +393,7 @@ export default function HomePage () {
               <div className={`col-md-6 mb-4 mb-lg-5`}>
                 <div className="row">
                   <div
-                    className={`col-md-4 col-lg-3 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
+                    className={`col-md-4 col-lg-2 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
                   >
                     <div style={{ width: "6rem" }}>
                       <Image
@@ -404,7 +404,7 @@ export default function HomePage () {
                     </div>
                   </div>
                   <div
-                    className={`col-md-8 col-lg-9 text-center text-md-start`}
+                    className={`col-md-8 col-lg-10 text-center text-md-start`}
                   >
                     <h5 className="default-primary-font-color2 mb-3">
                       Set up Account
@@ -420,7 +420,7 @@ export default function HomePage () {
               <div className={`col-md-6 mb-4 mb-lg-5`}>
                 <div className="row">
                   <div
-                    className={`col-md-4 col-lg-3 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
+                    className={`col-md-4 col-lg-2 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
                   >
                     <div style={{ width: "6rem" }}>
                       <Image
@@ -431,7 +431,7 @@ export default function HomePage () {
                     </div>
                   </div>
                   <div
-                    className={`col-md-8 col-lg-9 text-center text-md-start`}
+                    className={`col-md-8 col-lg-10 text-center text-md-start`}
                   >
                     <h5 className="default-primary-font-color2 mb-3">Create</h5>
                     <div className="default-font-color3">
@@ -445,7 +445,7 @@ export default function HomePage () {
               <div className={`col-md-6 mb-4 mb-lg-5`}>
                 <div className="row">
                   <div
-                    className={`col-md-4 col-lg-3 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
+                    className={`col-md-4 col-lg-2 my-3 my-md-0 d-flex justify-content-center d-md-block mb-3`}
                   >
                     <div style={{ width: "6rem" }}>
                       <Image
@@ -456,7 +456,7 @@ export default function HomePage () {
                     </div>
                   </div>
                   <div
-                    className={`col-md-8 col-lg-9 text-center text-md-start`}
+                    className={`col-md-8 col-lg-10 text-center text-md-start`}
                   >
                     <h5 className="default-primary-font-color2 mb-3">Earn</h5>
                     <div className="default-font-color3">
@@ -470,10 +470,10 @@ export default function HomePage () {
               <div className={`col-md-6`}>
                 <div className="row">
                   <div
-                    className={`col-md-4 col-lg-3 d-flex justify-content-center d-md-block mb-3`}
+                    className={`col-md-4 col-lg-2 d-flex justify-content-center d-md-block mb-3`}
                   ></div>
                   <div
-                    className={`col-md-8 col-lg-9 text-center text-md-start`}
+                    className={`col-md-8 col-lg-10 text-center text-md-start`}
                   ></div>
                 </div>
               </div>
@@ -481,10 +481,10 @@ export default function HomePage () {
               <div className={`col-md-6`}>
                 <div className="row">
                   <div
-                    className={`col-md-4 col-lg-3 d-flex justify-content-center d-md-block mb-3`}
+                    className={`col-md-4 col-lg-2 d-flex justify-content-center d-md-block mb-3`}
                   ></div>
                   <div
-                    className={`col-md-8 col-lg-9 text-center text-md-start`}
+                    className={`col-md-8 col-lg-10 text-center text-md-start`}
                   >
                     <Link href="/">
                       <a className="text-decoration-none">
