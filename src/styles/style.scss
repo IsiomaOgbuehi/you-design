@@ -224,7 +224,7 @@ nav.sticky {
     position: sticky;
     background-color: #fff;
     padding: 0.5rem;
-    z-index: 100;
+    z-index: 3;
     animation: slideIn .42s cubic-bezier(.165, .84, .44, 1);
 }
 @keyframes slideIn {
@@ -233,7 +233,59 @@ nav.sticky {
         transform: translateZ(0);
     }
 }
+// .owl-nav.disabled{
+//     display: block !important;
+// }
+.owl-carousel {
+    padding-left: 10px;
+    padding-right: 10px;
+   
+}
 
-@media (min-width: 991px) {
-    
+.owl-carousel .owl-stage-outer {
+    z-index: 1;
+}
+
+.owlLeftNav{
+    width: 64px;
+    height: 64px;
+    background: url('../../public/assets/img/icons/owl-left.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.owlRightNav {
+    width: 64px;
+    height: 64px;
+    background: url('../../public/assets/img/icons/owl-right.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.owl-prev, .owl-next{
+    padding: 0px !important;
+
+    &:hover{
+        padding: 0px !important;
+        width: max-content !important;
+        background-color: transparent !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .owl-carousel {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .owl-theme .owl-nav {
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    .owl-nav {
+        position: absolute;
+        width: 100%;
+        left:0px;
+        top: -20px;
+        z-index: 0;
+    }
 }

@@ -4,7 +4,7 @@
 }
 
 .bannerPrimaryText {
-  font-size: 22px;
+  font-size: 32px;
   color: #0B3148;
   font-weight: 700;
   line-height: 50px;
@@ -43,25 +43,35 @@
 }
 
 .featuredButtons {
-  border-color: #0B3148 !important;
-  color: #fff !important;
-  background-color: #0B3148 !important;
-  padding: 6px 30px !important;
-  border-radius: 10px !important;
-  border-style: solid !important;
-  border-width: 1px;
-  font-weight: 500 !important;
-  font-size: 15px;
+  border-color: #0B3148;
+  color: #fff;
+  background-color: #0B3148;
+  height: 47px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-radius: 11px;
+  font-weight: 500;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .featuredButtons:hover {
-  background-color: #0B3148 !important;
-  border-color: #0B3148 !important;
-  color: #fff !important;
+  background-color: #0B3148;
+  border-color: #0B3148;
+  color: #fff;
+  cursor: pointer;
 }
 
 .designerImg {
-  width: 80%;
+  width: 100%;
 }
 
 .designerImg > div {
@@ -243,6 +253,100 @@
   z-index: 10;
 }
 
+.hireDesignerDiv {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 305px;
+  height: 305px;
+  border-radius: 50%;
+  opacity: 1;
+  background-color: #e54f54;
+}
+
+.hireDesignerInnerDiv {
+  position: relative;
+  display: inline-block;
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  background-color: black;
+  background: url("../../../public/assets/img/homePage/computer_guy_mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 160%;
+}
+
+.item1 {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: small;
+  font-weight: 500;
+  margin-left: -100%;
+  margin-top: 40%;
+}
+
+.item2 {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: small;
+  font-weight: 500;
+  margin-right: -100%;
+  margin-top: 40%;
+}
+
+.item3 {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: small;
+  font-weight: 500;
+  margin-right: -85%;
+  margin-top: -70%;
+}
+
 @media (min-width: 768px) {
   .browseJobsInput {
     height: 56px !important;
@@ -293,26 +397,44 @@
     width: 176px;
     font-size: 1rem;
   }
+  .bannerPrimaryText::after {
+    position: absolute;
+    font-size: 56px;
+    margin-top: 10px;
+    margin-left: 10px;
+    content: '--';
+  }
 }
 
 @media (min-width: 991px) {
   .featuredButtons {
-    border-color: #0B3148 !important;
-    color: #fff !important;
-    background-color: #0B3148 !important;
-    padding: 10px 30px !important;
-    border-radius: 10px !important;
-    border-style: solid !important;
-    border-width: 1px;
-    font-weight: 500 !important;
-    font-size: 20px;
+    border-color: #0B3148;
+    color: #fff;
+    background-color: #0B3148;
+    height: 50px;
+    padding-right: 47px;
+    padding-left: 47px;
+    border-radius: 11px;
+    font-weight: 500;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .featuredButtons:hover {
-    background-color: #0B3148 !important;
-    border-color: #0B3148 !important;
-    color: #fff !important;
+    background-color: #0B3148;
+    border-color: #0B3148;
+    color: #fff;
+    cursor: pointer !important;
   }
   .bannerPrimaryText {
+    position: relative;
     font-size: 56px;
     color: #0B3148;
     font-weight: 700;
@@ -351,6 +473,28 @@
   .getOnListDiv {
     font-size: 1.2rem;
     width: 60%;
+  }
+  .hireDesignerDiv {
+    width: 405px;
+    height: 405px;
+  }
+  .item1 {
+    margin-left: -95%;
+    margin-top: 40%;
+    width: 69px;
+    height: 69px;
+  }
+  .item2 {
+    margin-right: -95%;
+    margin-top: 40%;
+    width: 69px;
+    height: 69px;
+  }
+  .item3 {
+    margin-right: -75%;
+    margin-top: -70%;
+    width: 69px;
+    height: 69px;
   }
 }
 /*# sourceMappingURL=home.module.css.map */

@@ -15,6 +15,8 @@ import Brush from "../../../public/assets/img/icons/brush.svg";
 import bookMark from "../../../public/assets/img/icons/bookmark_project.svg";
 import HowItWorksRegister from "../../../public/assets/img/icons/how_it_works_register.svg";
 import HowItWorksSetupAcct from "../../../public/assets/img/icons/how_it_works_setupAcct.svg";
+import OwlLeftNav from "../../../public/assets/img/icons/owl_left.png";
+import OwlRightNav from "../../../public/assets/img/icons/owl-right.svg";
 import {ImArrowRight2} from "react-icons/im";
 // import OwlCarousel from "@ntegral/react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -46,10 +48,10 @@ const responsive = {
     margin: 10,
     stagePadding: 15,
     autoWidth: true,
-    navText: [
-      "<button className='nav-btn prev-slide'>fff</button>",
-      "<button className='nav-btn next-slide'>nnn</button>",
-    ],
+    // navText: [
+    //   "<button className='nav-btn prev-slide'>fff</button>",
+    //   "<button className='nav-btn next-slide'>nnn</button>",
+    // ],
   },
   920: {
     items: 5,
@@ -58,11 +60,13 @@ const responsive = {
     stagePadding: 15,
     autoWidth: true,
     navText: [
-      "<button className='nav-btn prev-slide'>fff</button>",
-      "<button className='nav-btn next-slide'>nnn</button>",
+      `<div class='owlLeftNav'> </div>`,
+      `<div class='owlRightNav'></div>`,
     ],
   },
 };
+
+const demandColors = ["#4f5d71", "#828a99", "#7c4e46"];
 
 export default function HomePage () {
   const [howItWorks, toggleHowItWorks] = useState(true);
@@ -80,7 +84,7 @@ export default function HomePage () {
             <div className="col-md-6">
               <h1 className={`${style.bannerPrimaryText}`}>
                 Bring your ideas to life with Africa’s top{" "}
-                <span className="d-none d-md-inline-block">___</span>
+                {/* <span className="d-none d-md-inline-block">___</span> */}
               </h1>
               <h1 className={`${style.bannerSecondaryText} fst-italic`}>
                 Creatives
@@ -113,31 +117,39 @@ export default function HomePage () {
         <div className="container">
           <div className="row">
             <div className={`mt-5 ${style.featuredButtonsCarousel}`}>
-              <div className={`py-3 px-4`}>In high demand</div>
-              <div className={`px-4 pb-4 pt-2 position-relative`}>
+              <div
+                className={`py-3 d-none d-md-block`}
+                style={{ marginLeft: "80px" }}
+              >
+                In high demand
+              </div>
+              <div className={`pb-4 pt-4 pt-md-2 position-relative`}>
                 <OwlCarousel
                   className={`owl-theme`}
                   loop
-                  //   stagePadding={20}
-                  //   margin={0}
                   responsive={responsive}
                   dots={false}
-                  // nav
                 >
                   <div className="item">
-                    <button className={`${style.featuredButtons}`}>
+                    <div className={`${style.featuredButtons}`}>
                       Logo Design
-                    </button>
+                    </div>
                   </div>
                   <div className="item">
-                    <button className={`${style.featuredButtons}`}>
+                    <div
+                      className={`${style.featuredButtons}`}
+                      style={{ background: demandColors[0] }}
+                    >
                       UI Design
-                    </button>
+                    </div>
                   </div>
                   <div className="item">
-                    <button className={`${style.featuredButtons}`}>
+                    <div
+                      className={`${style.featuredButtons}`}
+                      style={{ background: demandColors[2] }}
+                    >
                       Letter Head
-                    </button>
+                    </div>
                   </div>
                 </OwlCarousel>
                 {/* <div className={`d-none d-lg-flex ${style.owlDiv}`}>
@@ -153,7 +165,7 @@ export default function HomePage () {
 
         <div className={`bg-red`}>
           <div className="container">
-            <div className="row py-4 py-md-5 d-block d-md-flex flex-row-reverse">
+            <div className="row py-4 py-md-5 flex-row-reverse">
               <div className={`d-none d-lg-block`}></div>
               <div
                 className={`col-12 col-md-6 d-md-flex flex-column justify-content-center`}
@@ -196,14 +208,30 @@ export default function HomePage () {
                   />
                 </div>
                 <div
-                  className={`d-none d-md-flex align-items-center row mt-4 mt-md-0`} // ${style.designerImg}
+                  className={`d-none d-md-flex ${style.hireDesignerDiv}`}
+                  // className={`d-none d-md-flex align-items-center row mt-4 mt-md-0`}
+                  // ${style.designerImg}
                 >
-                  <Image
-                    src={CompuerGuyLG}
-                    alt="Designer"
-                    // className={`${style.image}`}
-                    layout="responsive"
-                  />
+                  <div className={`${style.hireDesignerInnerDiv}`}>
+                    {/* <div className={`${style.designerImg}`}>
+                      <Image
+                      src={CompuerGuyMobile}
+                      alt="Designer"
+                      // className={`${style.image}`}
+                      // layout="fill"
+                    />
+                    </div> */}
+                  </div>
+
+                  <div className={`${style.item1}`}>
+                    <span className="text-center">Logo Design</span>
+                  </div>
+                  <div className={`${style.item2}`}>
+                    <span className="text-center">Business Card</span>
+                  </div>
+                  <div className={`${style.item3}`}>
+                    <span className="text-center">Website UI</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -331,14 +359,14 @@ export default function HomePage () {
           >
             <div className="container">
               {/* <div className="row"> */}
-                <button className={`${style.btnSeeMore}`}>
-                  <div className="d-flex align-items-center justify-content-center">
-                    <span className="me-2">See More</span>{" "}
-                    <span>
-                      <ImArrowRight2 />
-                    </span>{" "}
-                  </div>
-                </button>
+              <button className={`${style.btnSeeMore}`}>
+                <div className="d-flex align-items-center justify-content-center">
+                  <span className="me-2">See More</span>{" "}
+                  <span>
+                    <ImArrowRight2 />
+                  </span>{" "}
+                </div>
+              </button>
               {/* </div> */}
             </div>
           </div>

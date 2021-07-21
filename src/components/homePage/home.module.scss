@@ -1,5 +1,5 @@
 @import '../../styles/variables.scss';
-$bannerTextPrimarySM: 22px; // Primary Colored Text in Banner for Mobile
+$bannerTextPrimarySM: 32px; // Primary Colored Text in Banner for Mobile
 $bannerTextPrimaryMD: 56px;
 
 $bannerTextSecondarySM: 36px; // Secondary Colored Text in Banner for Mobile
@@ -44,26 +44,47 @@ $bannerTextSecondaryMD: 69px;
     box-shadow: 0 -0.1px 2px rgba(0, 0, 0, .15);
 }
 
+// .featuredButtons {
+//     border-color: $primary !important;
+//     color: #fff !important;
+//     background-color: $primary !important;
+//     padding: 6px 30px !important;
+//     border-radius: 10px !important;
+//     border-style: solid !important;
+//     border-width: 1px;
+//     font-weight: 500 !important;
+//     font-size: 15px;
+
+//     &:hover {
+//         background-color: $primary !important;
+//         border-color: $primary !important;
+//         color: #fff !important;
+//     }
+// }
 .featuredButtons {
-    border-color: $primary !important;
-    color: #fff !important;
-    background-color: $primary !important;
-    padding: 6px 30px !important;
-    border-radius: 10px !important;
-    border-style: solid !important;
-    border-width: 1px;
-    font-weight: 500 !important;
-    font-size: 15px;
+    border-color: $primary;
+    color: #fff;
+    background-color: $primary;
+    height: 47px;
+    padding-right: 32px;
+    padding-left: 32px;
+    border-radius: 11px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
-        background-color: $primary !important;
-        border-color: $primary !important;
-        color: #fff !important;
+        background-color: $primary;
+        border-color: $primary;
+        color: #fff;
+        cursor: pointer;
     }
 }
 
 .designerImg {
-    width: 80%;
+    width: 100%;
 }
 
 .designerImg>div {
@@ -214,6 +235,83 @@ $bannerTextSecondaryMD: 69px;
     z-index: 10;
 }
 
+.hireDesignerDiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 305px;
+    height: 305px;
+    border-radius: 50%;
+    opacity: 1;
+    background-color: #e54f54;
+    // $secondary;
+}
+
+.hireDesignerInnerDiv{
+    position: relative;
+    display: inline-block;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background-color: black;
+    background: url('../../../public/assets/img/homePage/computer_guy_mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: 160%;
+    //   -webkit-background-size: cover;
+    //   -moz-background-size: cover;
+    //   -o-background-size: cover;
+    //   background-size: cover;
+    //   background-attachment: fixed;
+}
+
+.item1{
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: 500;
+    margin-left: -100%;
+    margin-top: 40%;
+}
+
+.item2{
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: 500;
+    margin-right: -100%;
+    margin-top: 40%;
+}
+
+.item3{
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: 500;
+    margin-right: -85%;
+    margin-top: -70%;
+}
+
 
 @media (min-width: 768px) {
     .browseJobsInput {
@@ -268,35 +366,46 @@ $bannerTextSecondaryMD: 69px;
         width: 176px;
         font-size: 1rem;
     }
+    .bannerPrimaryText::after {
+        position: absolute;
+        font-size: $bannerTextPrimaryMD;
+        margin-top: 10px;
+        margin-left: 10px;
+        content: '--';
+    }
     
 }
 
 @media (min-width: 991px) {
     .featuredButtons {
-        border-color: $primary !important;
-        color: #fff !important;
-        background-color: $primary !important;
-        padding: 10px 30px !important;
-        border-radius: 10px !important;
-        border-style: solid !important;
-        border-width: 1px;
-        font-weight: 500 !important;
-        font-size: 20px;
+        border-color: $primary;
+        color: #fff;
+        background-color: $primary;
+        height: 50px;
+        padding-right: 47px;
+        padding-left: 47px;
+        border-radius: 11px;
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
-            background-color: $primary !important;
-            border-color: $primary !important;
-            color: #fff !important;
+            background-color: $primary;
+            border-color: $primary;
+            color: #fff;
+            cursor: pointer !important;
         }
     }
 
     .bannerPrimaryText {
+        position: relative;
         font-size: $bannerTextPrimaryMD;
         color: $primary;
         font-weight: 700;
         line-height: 80px;
     }
-
     .bannerSecondaryText {
         font-size: $bannerTextSecondaryMD;
         color: $secondary;
@@ -330,6 +439,29 @@ $bannerTextSecondaryMD: 69px;
     .getOnListDiv {
         font-size: 1.2rem;
         width: 60%;
+    }
+
+    .hireDesignerDiv {
+        width: 405px;
+        height: 405px; // $secondary;
+    }
+    .item1{
+        margin-left: -95%;
+        margin-top: 40%;
+        width: 69px;
+        height: 69px;
+    }
+    .item2{
+         margin-right: -95%;
+         margin-top: 40%;
+         width: 69px;
+         height: 69px;
+    }
+    .item3{
+        margin-right: -75%;
+        margin-top: -70%;
+        width: 69px;
+        height: 69px;
     }
 }
 
