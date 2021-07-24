@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "bootstrap": "^5.0.0-beta3",
     "hamburger-react": "^2.4.1",
     "next": "11.0.1",

@@ -1,0 +1,154 @@
+.profileBanner {
+  height: calc(252px / 3);
+  width: 100vw;
+}
+
+.unsetImg {
+  height: 100%;
+}
+
+.unsetImg > div {
+  height: 100%;
+  position: unset !important;
+}
+
+.customImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100% !important;
+  position: relative !important;
+}
+
+.avSet {
+  width: 100%;
+  height: 100%;
+}
+
+.avSet > div {
+  position: unset !important;
+  border-radius: 50%;
+  height: inherit;
+  width: inherit;
+}
+
+.avSet .profileImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100% !important;
+  position: relative !important;
+}
+
+.profileAvatarDiv {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.innerPrifileAvatar {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  background-color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fSizeBannerName {
+  font-size: 18px;
+  color: #000;
+}
+
+.profileContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: -10px;
+}
+
+.profileContentMain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  overflow: hidden;
+}
+
+.bannerSkill {
+  height: 22px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border: 1px solid #efefef;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .profileBanner {
+    height: calc(252px / 2);
+    width: 100vw;
+  }
+  .profileContentMain {
+    position: absolute;
+    top: 50%;
+  }
+  .fSizeBannerName {
+    font-size: 24px;
+  }
+  .profileContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (min-width: 991px) {
+  .profileBanner {
+    height: 252px;
+  }
+  .fSizeBannerName {
+    color: #fff;
+  }
+  .profileContentMain {
+    position: absolute;
+    top: 10%;
+  }
+}
+/*# sourceMappingURL=banner.module.css.map */

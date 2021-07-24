@@ -1,0 +1,136 @@
+@import '../../styles/variables.scss';
+
+
+.profileBanner {
+    height: calc(252px / 3); // 252px;
+    width: 100vw;
+    // background-image: url('../../../public/assets/img/profile/profile_bg.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+}
+
+.unsetImg {
+    height: 100%;
+}
+
+.unsetImg>div {
+    height: 100%;
+    position: unset !important;
+}
+
+.customImg {
+    object-fit: cover;
+    height: 100% !important;
+    position: relative !important;
+    // height: unset !important;
+}
+
+.avSet {
+    width: 100%;
+    height: 100%;
+
+    >div {
+        position: unset !important;
+        border-radius: 50%;
+        height: inherit;
+        width: inherit;
+    }
+
+    .profileImg {
+        object-fit: cover;
+        width: 100% !important;
+        position: relative !important;
+    }
+}
+
+
+.profileAvatarDiv {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerPrifileAvatar {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fSizeBannerName {
+    font-size: 18px;
+    color: #000;
+}
+
+.profileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // position: absolute;
+    top: -10px;
+}
+
+.profileContentMain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    overflow: hidden;
+}
+
+.bannerSkill {
+    height: 22px;
+    padding-left: 9px;
+    padding-right: 9px;
+    border: 1px solid #efefef;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .profileBanner {
+        height: calc(252px / 2); // 252px;
+        width: 100vw;
+    }
+
+    .profileContentMain {
+        position: absolute;
+        top: 50%;
+    }
+
+    .fSizeBannerName {
+        font-size: 24px;
+    }
+
+    .profileContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (min-width: 991px) {
+    .profileBanner {
+        height: 252px;
+    }
+
+    .fSizeBannerName {
+        color: #fff;
+    }
+
+    .profileContentMain {
+        position: absolute;
+        top: 10%;
+    }
+}

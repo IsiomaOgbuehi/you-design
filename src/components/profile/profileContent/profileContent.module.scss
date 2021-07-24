@@ -1,0 +1,93 @@
+.wrapper {
+    background-color: #f4f5f6;
+    padding-top: 35px;
+    padding-bottom: 65px;
+}
+.sideContent{
+    height: 325px;
+    background-color: #fff;
+    padding-top: 3px;
+}
+
+.menuItems{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    color: #003149;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 400;
+    border: 1px solid transparent;
+    &:hover{
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: #003149;
+        background-color: #f4f5f6;
+        font-size: 14px;
+    }
+}
+
+.active {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #003149;
+    background-color: #f4f5f6;
+    font-weight: 500;
+}
+
+.formWrapper{
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 64px 100px;
+    margin-bottom: 65px;
+}
+
+.formHeader{
+    font-size: 28px;
+    color: #003149;
+    font-weight: 600;
+}
+.formSubHeader{
+    font-size: 16px;
+    color: #6a737d;
+}
+.formLabelText{
+    font-size: 17px;
+}
+.formControl{
+    border: 1px solid #eaeaea;
+    
+    &:focus{
+        border: 1px solid #6a737d;
+        outline: none;
+        box-shadow: none;
+    }
+}
+.formCheckInput {
+    // background-image: none;
+    cursor: pointer;
+    
+    &:checked[type="radio"]{
+        background-color: #003149;
+        border-color: #fff;
+        border-width: 1px;
+        border-style: solid;
+        background-size: 90%;
+        outline: none;
+        box-shadow: 0 0 0 1px #003149,
+        0 0 0 1px #003149;
+        background: #003149;
+    }
+}
+
+.btnSaveChanges{
+    height: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #c53a31;
+    color: #fff;
+    border-radius: 25px;
+}
