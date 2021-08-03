@@ -335,6 +335,46 @@ table .table-row-archived th, table td {
   padding: 10px 23px;
 }
 
+.featuredButtons {
+  border-color: #0B3148;
+  color: #fff;
+  background-color: #0B3148;
+  height: 47px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-radius: 11px;
+  font-weight: 500;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.featuredButtons:hover {
+  background-color: #0B3148;
+  border-color: #0B3148;
+  color: #fff;
+  cursor: pointer;
+}
+
+.owl-item:nth-child(1) .featuredButtons {
+  background-color: #4f5d71;
+}
+
+.owl-item:nth-child(3n - 1) .featuredButtons {
+  background-color: #828a99;
+}
+
+.owl-item:nth-child(3n - 2) .featuredButtons {
+  background-color: #7c4e46;
+}
+
 @media (min-width: 768px) {
   .owl-carousel {
     padding-left: 80px;

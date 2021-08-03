@@ -338,6 +338,45 @@ table {
     }
 
 }
+.featuredButtons {
+    border-color: $primary;
+    color: #fff;
+    background-color: $primary;
+    height: 47px;
+    padding-right: 32px;
+    padding-left: 32px;
+    border-radius: 11px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+.owl-item:nth-child(1) { 
+    .featuredButtons{ 
+        background-color: #4f5d71;
+    }
+}
+
+.owl-item:nth-child(3n - 1) { 
+    .featuredButtons{ 
+        background-color: #828a99;
+    }
+}
+
+.owl-item:nth-child(3n - 2) { 
+    .featuredButtons{ 
+        background-color: #7c4e46;
+    }
+}
+
 
 @media (min-width: 768px) {
     .owl-carousel {

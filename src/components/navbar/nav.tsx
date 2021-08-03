@@ -71,25 +71,47 @@ export default function Nav() {
             >
               <div className={`${style.navLink}`}>
                 <Link href="/">
-                  <a>Hire a Designer</a>
+                  <a className={` ${style.nav_item}`}>Hire a Designer</a>
+                </Link>
+                <div className={`${style.dropdown_container}`}>
+                <div className={`${style.dropdown}`}>
+                    <a href="">
+                      <div className="d-flex align-items-center p-2">
+                        <img width="30" height="30" src="" />
+                        <div className="d-flex ps-2 flex-column align-items-start">
+                          <span className={`${style.dropdown_title}`}>Create a new project</span>
+                          Get proposals for your brief
+                          </div>
+                      </div>
+                    </a>
+                    <a href="">
+                      <div className="d-flex align-items-center p-2">
+                        <img width="30" height="30" src="" />
+                        <div className="d-flex ps-2 flex-column align-items-start">
+                          <span className={`${style.dropdown_title}`}>Browse Portfolios</span>
+                         See works from top creatives
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className={`${style.navLink}`}>
+                <Link href="/">
+                  <a className={` ${style.nav_item}`}>Find Design Jobs</a>
                 </Link>
               </div>
 
               <div className={`${style.navLink}`}>
                 <Link href="/">
-                  <a>Find Design Jobs</a>
-                </Link>
-              </div>
-
-              <div className={`${style.navLink}`}>
-                <Link href="/">
-                  <a>How it Works</a>
+                  <a className={` ${style.nav_item}`}>How it Works</a>
                 </Link>
               </div>
 
               <div className={`${style.navLink}`}>
                 <Link href="/login">
-                  <a>Sign In</a>
+                  <a className={` ${style.nav_item}`}>Sign In</a>
                 </Link>
               </div>
 

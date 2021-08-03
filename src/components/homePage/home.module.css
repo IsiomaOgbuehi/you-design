@@ -70,6 +70,18 @@
   cursor: pointer;
 }
 
+/* Select the first list item */
+/* Select odd list items */
+/* Select even list items */
+.featuredButtons:nth-child(1) {
+  background-color: #4f5d71;
+}
+
+/* Select each list item every 3 (3,6,9...) */
+.featuredButtons:nth-child(2n) {
+  background-color: #828a99;
+}
+
 .designerImg {
   width: 100%;
 }
@@ -396,13 +408,6 @@
   .tab button {
     width: 176px;
     font-size: 1rem;
-  }
-  .bannerPrimaryText::after {
-    position: absolute;
-    font-size: 56px;
-    margin-top: 10px;
-    margin-left: 10px;
-    content: '--';
   }
 }
 

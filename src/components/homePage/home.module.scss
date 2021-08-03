@@ -44,6 +44,7 @@ $bannerTextSecondaryMD: 69px;
     box-shadow: 0 -0.1px 2px rgba(0, 0, 0, .15);
 }
 
+
 // .featuredButtons {
 //     border-color: $primary !important;
 //     color: #fff !important;
@@ -81,6 +82,19 @@ $bannerTextSecondaryMD: 69px;
         color: #fff;
         cursor: pointer;
     }
+}
+
+/* Select the first list item */
+
+/* Select odd list items */
+
+/* Select even list items */
+.featuredButtons:nth-child(1) { 
+    background-color: #4f5d71;
+}
+/* Select each list item every 3 (3,6,9...) */
+.featuredButtons:nth-child(2n) { 
+    background-color: #828a99;
 }
 
 .designerImg {
@@ -366,15 +380,7 @@ $bannerTextSecondaryMD: 69px;
     .tab button{
         width: 176px;
         font-size: 1rem;
-    }
-    .bannerPrimaryText::after {
-        position: absolute;
-        font-size: $bannerTextPrimaryMD;
-        margin-top: 10px;
-        margin-left: 10px;
-        content: '--';
-    }
-    
+    }    
 }
 
 @media (min-width: 991px) {

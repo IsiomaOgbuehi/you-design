@@ -24,12 +24,55 @@
 
 .navLink {
   margin-right: 25px;
+  position: relative;
 }
 
 .navLink a {
   color: #000;
   text-decoration: none;
   font-size: 14px;
+}
+
+.navLink a.nav_item {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navLink:hover .dropdown_container {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: unset;
+}
+
+.dropdown_container {
+  position: absolute;
+  z-index: 100;
+  width: 300px;
+  top: 17px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
+  -webkit-transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
+  transition: opacity .2s ease-in,transform .2s ease-in;
+  transition: opacity .2s ease-in,transform .2s ease-in,-webkit-transform .2s ease-in;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.dropdown {
+  background: #fff;
+  margin-top: 25px;
+  -webkit-box-shadow: 0 0 8px 1px rgba(33, 41, 60, 0.15);
+          box-shadow: 0 0 8px 1px rgba(33, 41, 60, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown_title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .menu {
