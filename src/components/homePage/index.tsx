@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 import style from './home.module.css';
-import BannerImg from "../../../public/assets/img/home-banner-illustration.svg";
+import BannerImg from "../../../public/assets/img/home-banner-illustration221.png";
 import Image from 'next/image';
-import { Button, ButtonOutline } from "../Buttons/buttons";
 // Images
 import CompuerGuyMobile from "../../../public/assets/img/homePage/computer_guy_mobile.png";
-import CompuerGuyLG from "../../../public/assets/img/homePage/computer_guy_lg.png";
 import ComputerIllustration from "../../../public/assets/img/homePage/computeriLLustration.svg";
 // ICONS
 import verifiedIcon from "../../../public/assets/img/icons/verified.svg";
@@ -15,8 +13,6 @@ import Brush from "../../../public/assets/img/icons/brush.svg";
 import bookMark from "../../../public/assets/img/icons/bookmark_project.svg";
 import HowItWorksRegister from "../../../public/assets/img/icons/how_it_works_register.svg";
 import HowItWorksSetupAcct from "../../../public/assets/img/icons/how_it_works_setupAcct.svg";
-import OwlLeftNav from "../../../public/assets/img/icons/owl_left.png";
-import OwlRightNav from "../../../public/assets/img/icons/owl-right.svg";
 import {ImArrowRight2} from "react-icons/im";
 // import OwlCarousel from "@ntegral/react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -69,7 +65,7 @@ const responsive = {
 const demandColors = ["#4f5d71", "#828a99", "#7c4e46"];
 
 export default function HomePage () {
-  const [howItWorks, toggleHowItWorks] = useState(true);
+  const [howItWorks, toggleHowItWorks] = useState("Freelancer");
 
     return (
       <div
@@ -246,7 +242,9 @@ export default function HomePage () {
                 className={`col-md-6 d-flex flex-column text-center justify-content-center align-items-center align-items-md-start`}
               >
                 <h2 className={`fw-bold ${style.findDesingJobsText}`}>
-                  <span style={{ color: "#252a2e" }}>Find design jobs</span>
+                  <label htmlFor="findDesignJobs">
+                    <span style={{ color: "#252a2e" }}>Find design jobs</span>
+                  </label>
                 </h2>
                 <div
                   className={`text-center text-md-start mt-3 ${style.subTextDescription}`}
@@ -258,6 +256,7 @@ export default function HomePage () {
                   <input
                     type="text"
                     className={`form-control ${style.browseJobsInput}`}
+                    id="findDesignJobs"
                   />
                   <button className={`btn btn-red ${style.browseJobsBtn}`}>
                     Browse Jobs
@@ -380,14 +379,16 @@ export default function HomePage () {
             <div className="mt-4 mt-lg-5 d-flex justify-content-center">
               <div className={`${style.tab}`}>
                 <button
-                  className={`${howItWorks ? style.active : ""}`}
-                  onClick={() => toggleHowItWorks(!howItWorks)}
+                  className={`${
+                    howItWorks === "Freelancer" ? style.active : ""
+                  }`}
+                  onClick={() => toggleHowItWorks("Freelancer")}
                 >
                   For Designers
                 </button>
                 <button
-                  className={`${!howItWorks ? style.active : ""}`}
-                  onClick={() => toggleHowItWorks(!howItWorks)}
+                  className={`${howItWorks === "Client" ? style.active : ""}`}
+                  onClick={() => toggleHowItWorks("Client")}
                 >
                   For Project Owner
                 </button>
@@ -518,7 +519,12 @@ export default function HomePage () {
                   <div
                     className={`col-md-8 col-lg-10 text-center text-md-start`}
                   >
-                    <Link href="/">
+                    <Link
+                      href={{
+                        pathname: "/signup",
+                        query: { accountType: `${howItWorks}` },
+                      }}
+                    >
                       <a className="text-decoration-none">
                         <div className="default-primary-font-color2 mb-3 fw-bold">
                           <span className="me-2">Register Now</span>

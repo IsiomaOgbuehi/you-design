@@ -111,6 +111,24 @@
           align-items: center;
 }
 
+.updateBannerImage {
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.updateBannerImage:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 @media (min-width: 768px) {
   .profileBanner {
     height: calc(252px / 2);
@@ -134,8 +152,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
     top: 0;
+  }
+  .updateBannerImage {
+    font-size: 14px;
   }
 }
 
@@ -149,6 +169,9 @@
   .profileContentMain {
     position: absolute;
     top: 10%;
+  }
+  .bannerWrapper {
+    position: fixed;
   }
 }
 /*# sourceMappingURL=banner.module.css.map */

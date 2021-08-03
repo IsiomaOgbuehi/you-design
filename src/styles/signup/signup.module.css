@@ -26,4 +26,39 @@
   border-color: #34CE79 !important;
   color: #fff;
 }
+
+.passwordToggle {
+  font-size: 20px;
+  position: absolute;
+  margin-top: -37px;
+  right: 10px;
+  cursor: pointer;
+  padding: 0px 5px;
+  background-color: #fff;
+}
+
+.formCheckInput {
+  cursor: pointer;
+}
+
+.formCheckInput:checked[type="radio"] {
+  background-color: #003149;
+  border-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  background-size: 90%;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 1px #003149, 0 0 0 1px #003149;
+          box-shadow: 0 0 0 1px #003149, 0 0 0 1px #003149;
+  background: #003149;
+}
+
+.formCheckInput + label {
+  cursor: pointer;
+}
+
+.errorText {
+  font-size: 14px;
+  height: 20px;
+}
 /*# sourceMappingURL=signup.module.css.map */

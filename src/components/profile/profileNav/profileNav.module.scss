@@ -57,16 +57,24 @@
 
 .viewPublicProfile {
     position: absolute;
-    font-size: 12px;
-    height: 35px;
+    font-size: 9px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: #f4f5f6;
     right: 10px;
     cursor: pointer;
+    margin-top: -115px;
+    &:hover{
+        background-color: rgba(244, 245, 246, 0.5);
+    }
+}
+.profileNav{
+    // position: absolute;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -81,19 +89,36 @@
 
     .viewPublicProfile {
         margin-top: -60px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 10px;
+        z-index: 1;
     }
 }
 
 @media (min-width: 991px) {
     .wrapper {
         // background-color: #f4f5f6;
-        margin-top: 0px;
+        // margin-top: 0px;
+        position: relative;
+        margin-top: 252px; // 322px;
+        // z-index: 1;
     }
+    .profileNav{
+        // position: absolute;
+    }
+    // .viewPublicProfile {
+    //      margin-top: -10px;
+    //      padding-left: 5px;
+    //      padding-right: 5px;
+    //      font-size: 11px;
+    //      right: 10px
+    // }
 
 }
 
-@media (min-width: 1600px) {
-    .viewPublicProfile {
-        margin-top: 0px;
-    }
-}
+// @media (min-width: 1600px) {
+//     .viewPublicProfile {
+//         margin-top: 0px;
+//     }
+// }

@@ -1,10 +1,9 @@
 .nav {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 3;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
 .navLogo {
@@ -138,5 +137,13 @@
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+@media (min-width: 991px) {
+  .nav {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10;
+  }
 }
 /*# sourceMappingURL=nav.module.css.map */

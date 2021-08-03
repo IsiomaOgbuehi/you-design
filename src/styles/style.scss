@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 @import './variables.scss';
-body{
+
+body {
     font-family: 'Barlow', sans-serif !important;
     padding: 0;
     margin: 0;
@@ -21,10 +22,11 @@ body{
 
 
 // FONT SIZES
-.font-large{
+.font-large {
     font-size: $font-size-lg;
 }
-.font-small{
+
+.font-small {
     font-size: $font-size-small;
 }
 
@@ -32,32 +34,40 @@ body{
 .default-primary-font-color2 {
     color: $primaryText2;
 }
-.default-font-color{
+
+.default-font-color {
     color: $text-grey;
 }
-.default-font-color2{
+
+.default-font-color2 {
     color: $text-grey2;
 }
-.default-font-color3{
+
+.default-font-color3 {
     color: $text-grey3;
 }
-.defaul-font-color4{
+
+.defaul-font-color4 {
     color: $text-grey4;
 }
-.dark-font-color{
+
+.dark-font-color {
     color: #000;
 }
-.text-danger{
+
+.text-danger {
     color: $secondary !important;
 }
 
 // LINK COLOR
-.link-danger{
+.link-danger {
     color: $link-danger;
-    a{
+
+    a {
         text-decoration: none;
         color: $link-danger;
-        &:hover{
+
+        &:hover {
             text-decoration: underline;
             color: $link-danger;
         }
@@ -66,10 +76,11 @@ body{
 
 // BG COLOR
 
-.bg-red{
+.bg-red {
     background-color: $secondary;
 }
-.bg-orange{
+
+.bg-orange {
     background-color: $orange;
 }
 
@@ -175,6 +186,7 @@ input {
     border-style: solid !important;
     border-width: 1px;
     font-weight: 500 !important;
+
     &:hover {
         background-color: #03263b !important;
         border-color: #03263b !important;
@@ -190,6 +202,7 @@ input {
     border-style: solid !important;
     border-width: 1px;
     font-weight: 500 !important;
+
     &:hover {
         background-color: $secondary !important;
         border-color: $secondary !important;
@@ -216,43 +229,50 @@ input {
         margin-top: 2px;
     }
 }
-.hiddenBody{
+
+.hiddenBody {
     overflow: hidden;
 }
 
-nav.sticky {
-    position: sticky;
-    background-color: #fff;
-    padding: 0.5rem;
-    z-index: 3;
-    animation: slideIn .42s cubic-bezier(.165, .84, .44, 1);
-}
+// nav.sticky {
+//     position: fixed;
+//     background-color: #fff;
+//     padding: 0.5rem;
+//     z-index: 3;
+//     animation: slideIn .42s cubic-bezier(.165, .84, .44, 1);
+// }
+
 @keyframes slideIn {
-    0%{transform: translate3d(0, -80px, 0);}
+    0% {
+        transform: translate3d(0, -80px, 0);
+    }
+
     100% {
         transform: translateZ(0);
     }
 }
+
 // .owl-nav.disabled{
 //     display: block !important;
 // }
 .owl-carousel {
     padding-left: 10px;
     padding-right: 10px;
-   
+
 }
 
 .owl-carousel .owl-stage-outer {
     z-index: 1;
 }
 
-.owlLeftNav{
+.owlLeftNav {
     width: 64px;
     height: 64px;
     background: url('../../public/assets/img/icons/owl-left.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .owlRightNav {
     width: 64px;
     height: 64px;
@@ -261,14 +281,62 @@ nav.sticky {
     background-repeat: no-repeat;
 }
 
-.owl-prev, .owl-next{
+.owl-prev,
+.owl-next {
     padding: 0px !important;
 
-    &:hover{
+    &:hover {
         padding: 0px !important;
         width: max-content !important;
         background-color: transparent !important;
     }
+}
+
+.MuiInput-underline::before {
+    border: none !important;
+}
+
+.MuiInput-underline::before,
+.MuiInput-underline::after {
+    border: none !important;
+}
+
+.MuiIconButton-root {
+    display: none !important;
+}
+
+.MuiChip-root {
+    background-color: #f4f5f6 !important;
+}
+table {
+    border-collapse: collapse;
+    .table-row,
+    .table-row-archived {
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .table-row th, td{
+        padding: 10px 23px;
+    }
+    .table-row th:nth-child(2),
+    th:nth-child(3),
+    td:nth-child(2),
+    td:nth-child(3) {
+        text-align: center;
+    }
+    .table-row th:last-child,
+    td:last-child {
+        padding-left: 0px;
+    }
+    .table-row th:nth-last-child(2),
+    td:nth-last-child(2) {
+        padding-right: 0px;
+    }
+
+    .table-row-archived th, td{
+        padding: 10px 23px;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -276,6 +344,7 @@ nav.sticky {
         padding-left: 80px;
         padding-right: 80px;
     }
+
     .owl-theme .owl-nav {
         display: flex !important;
         justify-content: space-between;
@@ -284,8 +353,91 @@ nav.sticky {
     .owl-nav {
         position: absolute;
         width: 100%;
-        left:0px;
+        left: 0px;
         top: -20px;
         z-index: 0;
     }
+
+}
+
+@media (min-width: 991px) {
+    .profileHeaderWrapper{
+        z-index: 1;
+        // position: relative;
+        // overflow: hidden;
+    }
+    // nav.sticky{
+    //     position: fixed;
+    //     width: 100%;
+    //     // animation: slideIn .42s cubic-bezier(.165, .84, .44, 1);
+    //     z-index: 2;
+
+   .bannerWrapper.sticky {
+        position: fixed;
+        top: 69px;
+        // filter: brightness(100%) !important;
+        z-index: 5;
+        animation: slideIn .15s cubic-bezier(.165, .84, .44, 1);
+
+
+        .profileBanner {
+            height: 85px !important; // calc(252px / 3) !important;
+            // z-index: 6;
+        }
+
+        .profileDynamicContent {
+            position: relative;
+            display: block;
+            // z-index: 6;
+            .profileAvatarDiv{
+                margin-top: 10px;
+                position: fixed;
+                z-index: 1;
+            }
+            .fSizeBannerName{
+                // position: static;
+                color: #fff;
+                // z-index: 7;
+                margin-left: 150px;
+                width: max-content;
+                margin-top: 30px !important;
+            }
+            .skillz {
+                display: none !important;
+            }
+        }
+
+    }
+// }
+
+.bannerWrapper.sticky + .profileNav {
+    position: fixed;
+    margin-top: 80px; // 154px; //80px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 4;
+
+    .profileNavMenu {
+        padding-left: 150px;
+        z-index: 6;
+    }
+
+    &+.profileSideMenu {
+
+        // top: 50px;
+        .profileSideMenuItems {
+            position: sticky;
+            top: 270px;
+        }
+    }
+    .viewPublicProfile{
+        margin-top: -10px;
+        // position: absolute;
+    }
+
+    // nav {
+    //     width: 100%;
+    // }
+
+}
 }

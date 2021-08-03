@@ -3,14 +3,12 @@ import Image from 'next/image';
 import style from './nav.module.css';
 import logo from "../../../public/assets/img/logo.svg";
 import Link from 'next/link';
-import { FiMenu } from "react-icons/fi";
 import Hamburger from "hamburger-react";
 
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const sideNav = () => {
-      console.log('here')
       return (
         <MobileMenu
           show={isMenuOpen}
@@ -18,14 +16,14 @@ export default function Nav() {
         />
       );
     }
-    useEffect(() => {
-      const nav = document.querySelector('nav');
-      window.addEventListener('scroll', () => {
-        nav?.classList.toggle("sticky", window.pageYOffset > 500);
-      });
+    // useEffect(() => {
+    //   const nav = document.querySelector('nav');
+    //   window.addEventListener('scroll', () => {
+    //     nav?.classList.toggle("sticky", window.pageYOffset > 500);
+    //   });
       
-       () => {return null;}
-    }, []);
+    //    () => {return null;}
+    // }, []);
     return (
       <>
         <nav

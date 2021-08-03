@@ -25,3 +25,36 @@
     @include btn($success-green, #34CE79, 100%);
 
 }
+
+.passwordToggle {
+    font-size: 20px;
+    position: absolute;
+    margin-top: -37px;
+    right: 10px;
+    cursor: pointer;
+    padding: 0px 5px;
+    background-color: #fff;
+}
+.formCheckInput {
+    // background-image: none;
+    cursor: pointer;
+
+    &:checked[type="radio"] {
+        background-color: #003149;
+        border-color: #fff;
+        border-width: 1px;
+        border-style: solid;
+        background-size: 90%;
+        outline: none;
+        box-shadow: 0 0 0 1px #003149,
+            0 0 0 1px #003149;
+        background: #003149;
+    }
+    & + label{
+        cursor: pointer;
+    }
+}
+.errorText{
+    font-size: 14px;
+    height: 20px;
+}

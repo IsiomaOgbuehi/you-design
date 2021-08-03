@@ -223,16 +223,6 @@ input {
   overflow: hidden;
 }
 
-nav.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: #fff;
-  padding: 0.5rem;
-  z-index: 3;
-  -webkit-animation: slideIn 0.42s cubic-bezier(0.165, 0.84, 0.44, 1);
-          animation: slideIn 0.42s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 @-webkit-keyframes slideIn {
   0% {
     -webkit-transform: translate3d(0, -80px, 0);
@@ -280,16 +270,69 @@ nav.sticky {
   background-repeat: no-repeat;
 }
 
-.owl-prev, .owl-next {
+.owl-prev,
+.owl-next {
   padding: 0px !important;
 }
 
-.owl-prev:hover, .owl-next:hover {
+.owl-prev:hover,
+.owl-next:hover {
   padding: 0px !important;
   width: -webkit-max-content !important;
   width: -moz-max-content !important;
   width: max-content !important;
   background-color: transparent !important;
+}
+
+.MuiInput-underline::before {
+  border: none !important;
+}
+
+.MuiInput-underline::before,
+.MuiInput-underline::after {
+  border: none !important;
+}
+
+.MuiIconButton-root {
+  display: none !important;
+}
+
+.MuiChip-root {
+  background-color: #f4f5f6 !important;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table .table-row,
+table .table-row-archived {
+  border-bottom: 1px solid #ebebeb;
+}
+
+table .table-row th, table td {
+  padding: 10px 23px;
+}
+
+table .table-row th:nth-child(2),
+table th:nth-child(3),
+table td:nth-child(2),
+table td:nth-child(3) {
+  text-align: center;
+}
+
+table .table-row th:last-child,
+table td:last-child {
+  padding-left: 0px;
+}
+
+table .table-row th:nth-last-child(2),
+table td:nth-last-child(2) {
+  padding-right: 0px;
+}
+
+table .table-row-archived th, table td {
+  padding: 10px 23px;
 }
 
 @media (min-width: 768px) {
@@ -311,6 +354,61 @@ nav.sticky {
     left: 0px;
     top: -20px;
     z-index: 0;
+  }
+}
+
+@media (min-width: 991px) {
+  .profileHeaderWrapper {
+    z-index: 1;
+  }
+  .bannerWrapper.sticky {
+    position: fixed;
+    top: 69px;
+    z-index: 5;
+    -webkit-animation: slideIn 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: slideIn 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .bannerWrapper.sticky .profileBanner {
+    height: 85px !important;
+  }
+  .bannerWrapper.sticky .profileDynamicContent {
+    position: relative;
+    display: block;
+  }
+  .bannerWrapper.sticky .profileDynamicContent .profileAvatarDiv {
+    margin-top: 10px;
+    position: fixed;
+    z-index: 1;
+  }
+  .bannerWrapper.sticky .profileDynamicContent .fSizeBannerName {
+    color: #fff;
+    margin-left: 150px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-top: 30px !important;
+  }
+  .bannerWrapper.sticky .profileDynamicContent .skillz {
+    display: none !important;
+  }
+  .bannerWrapper.sticky + .profileNav {
+    position: fixed;
+    margin-top: 80px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 4;
+  }
+  .bannerWrapper.sticky + .profileNav .profileNavMenu {
+    padding-left: 150px;
+    z-index: 6;
+  }
+  .bannerWrapper.sticky + .profileNav + .profileSideMenu .profileSideMenuItems {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 270px;
+  }
+  .bannerWrapper.sticky + .profileNav .viewPublicProfile {
+    margin-top: -10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

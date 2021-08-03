@@ -1,13 +1,13 @@
 .wrapper {
   background-color: #f4f5f6;
   padding-top: 35px;
-  padding-bottom: 65px;
 }
 
 .sideContent {
   height: 325px;
   background-color: #fff;
   padding-top: 3px;
+  top: 100px;
 }
 
 .menuItems {
@@ -49,7 +49,7 @@
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
-  padding: 64px 100px;
+  padding: 30px 20px;
   margin-bottom: 65px;
 }
 
@@ -79,6 +79,26 @@
           box-shadow: none;
 }
 
+.formControlGrey {
+  border: 1px solid #eaeaea;
+}
+
+.formControlGrey:focus {
+  border: 1px solid #e1e4ea;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.externalLinks a {
+  color: #6a737d;
+  text-decoration: none;
+}
+
+.inputGroupText {
+  background-color: #f4f5f6 !important;
+}
+
 .formCheckInput {
   cursor: pointer;
 }
@@ -95,12 +115,46 @@
   background: #003149;
 }
 
+.formCheckInput + label {
+  cursor: pointer;
+}
+
 .btnSaveChanges {
-  height: 50px;
+  height: 40px;
   padding-left: 60px;
   padding-right: 60px;
   background-color: #c53a31;
   color: #fff;
   border-radius: 25px;
+}
+
+.btnSaveChanges:hover {
+  color: #fff;
+  background-color: #d22c31;
+}
+
+.AutoComplete {
+  border: 1px solid #eaeaea;
+  border-radius: 2px;
+  padding: 11px 9px;
+}
+
+.passwordToggle {
+  font-size: 20px;
+  position: absolute;
+  margin-top: -37px;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .formWrapper {
+    padding: 64px 100px;
+    margin-bottom: 65px;
+  }
+  .wrapper {
+    position: relative;
+    z-index: 1;
+  }
 }
 /*# sourceMappingURL=profileContent.module.css.map */

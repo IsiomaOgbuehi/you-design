@@ -1,11 +1,11 @@
 @import '../../styles/variables.scss';
 
 .nav{
-    position:relative;
+    position: sticky;
     top: 0;
     background-color: #fff;
     z-index: 3;
-    transition: all 0.5s linear;
+    // transition: all 0.5s linear;
 }
 
 
@@ -124,4 +124,8 @@
     // .navLink{
     //     margin-right: 4rem;
     // }
+    .nav {
+        position: sticky;
+        z-index: 10;
+    }
 }

@@ -1,0 +1,112 @@
+.wrapper {
+  background-color: #f4f5f6;
+  padding-top: 35px;
+  padding-bottom: 65px;
+}
+
+.sideContent {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #fff;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  top: 100px;
+}
+
+.menuItems {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 20px;
+  color: #003149;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 400;
+  border: 1px solid transparent;
+}
+
+.menuItems:hover {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #003149;
+  background-color: #f4f5f6;
+  font-size: 14px;
+}
+
+.active {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #003149;
+  background-color: #f4f5f6;
+  font-weight: 500;
+}
+
+.tableWrapper {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  margin-bottom: 65px;
+}
+
+.headerText {
+  font-size: 32px;
+  color: #003149;
+  font-weight: 500;
+}
+
+.subText {
+  font-size: 16px;
+  color: #6a737d;
+}
+
+.iconBtn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e0e0e0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  color: #878787;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.iconBtn:hover {
+  background-color: rgba(235, 235, 235, 0.4);
+}
+
+.tr:nth-child(1) {
+  padding: 16px 64px !important;
+}
+
+.active {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #003149;
+  background-color: #f4f5f6;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    position: relative;
+    z-index: 1;
+  }
+}
+/*# sourceMappingURL=mybids.module.css.map */

@@ -9,7 +9,7 @@ import { SiTwitter, SiInstagram } from "react-icons/si";
 
 export default function Footer() {
     return (
-      <footer>
+      <footer className="bg-white">
         <div className={`container px-3 px-lg-5 py-5`}>
           <div className="row m-0 flex-column flex-lg-row flex-lg-row-reverse">
             <div className={`col-12 col-lg-10`}>

@@ -1,33 +1,145 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import style from './profileContent.module.css';
 import FormWrapper from './formWrapper';
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import TextField from "@material-ui/core/TextField";
+import { RiFacebookCircleFill, RiBehanceLine } from "react-icons/ri";
+import {
+  AiFillLinkedin,
+  AiOutlineTwitter,
+  AiOutlineDribbble,
+  AiOutlineInstagram,
+} from "react-icons/ai";
+import togglePassword from '../../../hooks/togglePassword';
 
 export default function ProfileContent() {
+  const about = useRef();
+  const skills = useRef();
+  const externalSkills = useRef();
+  const changePassword = useRef();
+
+  const [activeMenu, setActiveMenu] = useState('about');
+  // Get all divs that have ID defined
+  let sections: any;
+  if (typeof window === 'object') {
+    sections = document.querySelectorAll("div[id]");
+  }
+
+  // useEffect(() => {
+    
+  //   window.addEventListener("scroll", navHighlighter);
+  // }, [])
+
+  // const navHighlighter = () => {
+  //   // Get current scroll position
+  //   let scrollY = window.pageYOffset;
+
+  //   // Loop through sections to get height, top and ID values for each
+  //   sections.forEach((current: any) => {
+  //     const sectionHeight = current.offsetHeight;
+  //     const sectionTop = current.offsetTop - 450;
+  //     const sectionId = current.getAttribute('id');
+
+  //     // console.log(sectionTop + " " + sectionHeight + ' ' + sectionHeight+sectionTop);
+
+  //     if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
+  //       document
+  //         .querySelector(`[data-id=${sectionId}]`)
+  //         ?.classList.toggle(`${style.active}`);
+  //     } 
+  //     else {
+  //       document
+  //         .querySelector(`[data-id=${sectionId}]`)
+  //         ?.classList.remove(`${style.active}`);
+  //     }
+  //   });
+  // }
+  
+  const moveToSection = (ref: any, elementVal: string) => {
+    setActiveMenu(elementVal);
+     if (ref && ref.current /* + other conditions */) {
+      //  ref.current.scrollIntoView({ behavior: "smooth", block: "start", style: {top: "350px"} }); // behavior: "instant", block: "start"
+    const element = ref.current;
+    element.classList.toggle(`${style.active}`);
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - 550;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: "smooth",
+    }); 
+    }
+  }
     return (
-      <div className={`${style.wrapper}`}>
-        <div className="container">
-          <div className={`row`}>
-            {/* MENU ITEMS */}
-            <div className="d-none d-md-block col-3">
-              <div className={`${style.sideContent}`}>
-                <div className={`${style.menuItems} ${style.active}`}>
-                  About
+      <>
+        <div
+          className={`${style.wrapper} profileSideMenu`}
+        >
+          {/* <ProfileNav /> */}
+          <div className="container">
+            <div className={`row`}>
+              {/* MENU ITEMS */}
+              <div className="d-none d-md-block col-3">
+                <div className={`${style.sideContent} profileSideMenuItems`}>
+                  <div
+                    className={`${style.menuItems} ${
+                      activeMenu === "about" ? style.active : ""
+                    }`}
+                    onClick={() => moveToSection(about, "about")}
+                    data-id="about"
+                  >
+                    About
+                  </div>
+                  <div
+                    className={`${style.menuItems} ${
+                      activeMenu === "skills" ? style.active : ""
+                    }`}
+                    onClick={() => moveToSection(skills, "skills")}
+                    data-id="skillz"
+                  >
+                    Skills
+                  </div>
+                  <div
+                    className={`${style.menuItems} ${
+                      activeMenu === "externalLinks" ? style.active : ""
+                    }`}
+                    onClick={() =>
+                      moveToSection(externalSkills, "externalLinks")
+                    }
+                    data-id="externalLinks"
+                  >
+                    External Links
+                  </div>
+                  <div
+                    className={`${style.menuItems} ${
+                      activeMenu === "changePassword" ? style.active : ""
+                    }`}
+                    onClick={() =>
+                      moveToSection(changePassword, "changePassword")
+                    }
+                    data-id="changePassword"
+                  >
+                    Change Password
+                  </div>
                 </div>
-                <div className={`${style.menuItems}`}>Skills</div>
-                <div className={`${style.menuItems}`}>External Links</div>
-                <div className={`${style.menuItems}`}>Change Password</div>
               </div>
-            </div>
-            {/* CONTENT */}
-            <div className="col-12 col-md-9">
-              <FormWrapper component={<About />} />
-              <FormWrapper component={<Skills />} />
+              {/* CONTENT */}
+              <div className="col-12 col-md-9">
+                <FormWrapper component={<About />} reference={about} />
+                <FormWrapper component={<Skills />} reference={skills} />
+                <FormWrapper
+                  component={<ExternalSkills />}
+                  reference={externalSkills}
+                />
+                <FormWrapper
+                  component={<ChangePassword />}
+                  reference={changePassword}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
 }
 
@@ -35,7 +147,7 @@ export default function ProfileContent() {
 const About = () => {
   return (
     <>
-      <div className="mb-4">
+      <div className="mb-4" id="about">
         <h4 className={style.formHeader}>About You</h4>
         <span className={style.formSubHeader}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -122,22 +234,22 @@ const About = () => {
             <input
               type="text"
               className={`form-control me-2 d-inline-block ${style.formControl}`}
-              name="lastname"
-              id="lastname"
+              name="day"
+              id="day"
               style={{ width: "112px" }}
             />
             <input
               type="text"
               className={`form-control me-2 d-inline-block ${style.formControl}`}
-              name="lastname"
-              id="lastname"
+              name="month"
+              id="month"
               style={{ width: "202px" }}
             />
             <input
               type="text"
               className={`form-control d-inline-block ${style.formControl}`}
-              name="lastname"
-              id="lastname"
+              name="year"
+              id="year"
               style={{ width: "166px" }}
             />
           </div>
@@ -187,30 +299,265 @@ const About = () => {
 const Skills = () => {
   return (
     <>
-      <div className="mb-4">
+      <div className="mb-4" id="skillz">
         <h4 className={style.formHeader}>Skills</h4>
         <span className={style.formSubHeader}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           nonum
         </span>
       </div>
-      <div>
+      <div className={style.AutoComplete}>
         <Autocomplete
           multiple
           id="tags-standard"
           options={top100Films}
           getOptionLabel={(option) => option.title}
-          defaultValue={[top100Films[13]]}
+          // defaultValue={[top100Films[13]]}
           renderInput={(params) => (
             <TextField
               {...params}
               variant="standard"
-              label="Multiple values"
-              placeholder="Favorites"
+              // label="Multiple values"
+              placeholder="Type new skill here......"
             />
           )}
         />
       </div>
+      <div className="mt-5 d-flex justify-content-center">
+        <button className={`btn ${style.btnSaveChanges}`}>Save Changes</button>
+      </div>
+    </>
+  );
+}
+
+const ExternalSkills = () => {
+  return (
+    <>
+      <div className="mb-4" id="externalLinks">
+        <h4 className={style.formHeader}>External links</h4>
+        <span className={style.formSubHeader}>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonum
+        </span>
+      </div>
+      <form>
+        <div className="mb-4">
+          <label htmlFor="behance" className={`mb-2 ${style.formLabelText}`}>
+            <div className="d-flex align-items-center">
+              <RiBehanceLine />
+              <span className="ms-2">Behance</span>
+            </div>
+          </label>
+          <div className="input-group mb-3">
+            <span
+              className={`input-group-text d-none d-lg-block ${style.externalLinks} ${style.inputGroupText}`}
+              id="behance"
+            >
+              {/* <Link href=""> */}
+              <a
+                target="_blank"
+                href="https://www.behance.net/"
+                rel="noreferrer"
+              >
+                https://www.behance.net/
+              </a>
+              {/* </Link> */}
+            </span>
+            <input
+              type="text"
+              className={`form-control ${style.formControlGrey}`}
+              id="behance"
+              aria-describedby="behance"
+            />
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="facebook" className={`mb-2 ${style.formLabelText}`}>
+            <div className="d-flex align-items-center">
+              <RiFacebookCircleFill />
+              <span className="ms-2">Facebook</span>
+            </div>
+          </label>
+          <div className="input-group mb-3">
+            <span
+              className={`input-group-text d-none d-lg-block ${style.externalLinks} ${style.inputGroupText}`}
+            >
+              {/* <Link href=""> */}
+              <a
+                target="_blank"
+                href="https://web.facebook.com/"
+                rel="noreferrer"
+              >
+                https://web.facebook.com/
+              </a>
+              {/* </Link> */}
+            </span>
+            <input
+              type="text"
+              className={`form-control ${style.formControlGrey}`}
+              id="facebook"
+              aria-describedby="facebook"
+            />
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="linkedin" className={`mb-2 ${style.formLabelText}`}>
+            <div className="d-flex align-items-center">
+              <AiFillLinkedin />
+              <span className="ms-2">LinkedIn</span>
+            </div>
+          </label>
+          <div className="input-group mb-3">
+            <span
+              className={`input-group-text d-none d-lg-block ${style.externalLinks} ${style.inputGroupText}`}
+            >
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/"
+                rel="noreferrer"
+              >
+                https://www.linkedin.com/in/
+              </a>
+            </span>
+            <input
+              type="text"
+              className={`form-control ${style.formControlGrey}`}
+              aria-describedby="behance"
+              id="linkedin"
+            />
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="twitter" className={`mb-2 ${style.formLabelText}`}>
+            <div className="d-flex align-items-center">
+              <AiOutlineTwitter />
+              <span className="ms-2">Twitter</span>
+            </div>
+          </label>
+          <div className="input-group mb-3">
+            <span
+              className={`input-group-text d-none d-lg-block ${style.externalLinks} ${style.inputGroupText}`}
+            >
+              <a target="_blank" href="https://twitter.com/" rel="noreferrer">
+                https://twitter.com/
+              </a>
+            </span>
+            <input
+              type="text"
+              className={`form-control ${style.formControlGrey}`}
+              aria-describedby="twitter"
+              id="twitter"
+            />
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="twitter" className={`mb-2 ${style.formLabelText}`}>
+            <div className="d-flex align-items-center">
+              <AiOutlineDribbble />
+              <span className="ms-2">Dribble</span>
+            </div>
+          </label>
+          <div className="input-group mb-3">
+            <span
+              className={`input-group-text d-none d-lg-block ${style.externalLinks} ${style.inputGroupText}`}
+            >
+              <a target="_blank" href="https://dribbble.com/" rel="noreferrer">
+                https://dribbble.com/
+              </a>
+            </span>
+            <input
+              type="text"
+              className={`form-control ${style.formControlGrey}`}
+              aria-describedby="twitter"
+              id="twitter"
+            />
+          </div>
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="twitter" className={`mb-2 ${style.formLabelText}`}>
+            <div className="d-flex align-items-center">
+              <AiOutlineInstagram />
+              <span className="ms-2">Instagram</span>
+            </div>
+          </label>
+          <div className="input-group mb-3">
+            <span
+              className={`input-group-text d-none d-lg-block ${style.externalLinks} ${style.inputGroupText}`}
+            >
+              <a target="_blank" href="https://instagram.com/" rel="noreferrer">
+                https://instagram.com/
+              </a>
+            </span>
+            <input
+              type="text"
+              className={`form-control ${style.formControlGrey}`}
+              aria-describedby="twitter"
+              id="twitter"
+            />
+          </div>
+        </div>
+        <div className="mt-5 d-flex justify-content-center">
+          <button className={`btn ${style.btnSaveChanges}`}>
+            Save Changes
+          </button>
+        </div>
+      </form>
+    </>
+  );
+}
+
+const ChangePassword = () => {
+  const [PasswordType, Icon] = togglePassword();
+  const [NewPasswordType, newPassIcon] = togglePassword();
+  return (
+    <>
+      <div className="mb-4" id="changePassword">
+        <h4 className={style.formHeader}>Change password</h4>
+        <span className={style.formSubHeader}>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonum
+        </span>
+      </div>
+      <form>
+        <div className="mb-4 position-relative">
+          <label htmlFor="password" className={`mb-2 ${style.formLabelText}`}>
+            Password
+          </label>
+          <input
+            type={PasswordType}
+            className={`form-control ${style.formControl} pe-5`}
+            name="password"
+            id="password"
+          />
+          <div className={style.passwordToggle}>{Icon}</div>
+        </div>
+
+        <div className="mb-3 position-relative">
+          <label
+            htmlFor="newpassword"
+            className={`mb-2 ${style.formLabelText}`}
+          >
+            New Password
+          </label>
+          <input
+            type={NewPasswordType}
+            className={`form-control ${style.formControl} pe-5`}
+            name="newpassword"
+            id="newpassword"
+          />
+          <div className={style.passwordToggle}>{newPassIcon}</div>
+        </div>
+        <div className="mt-5 d-flex justify-content-center">
+          <button className={`btn ${style.btnSaveChanges}`}>
+            Save Changes
+          </button>
+        </div>
+      </form>
     </>
   );
 }
